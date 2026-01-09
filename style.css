@@ -43,13 +43,81 @@ body {
 h1 {
     margin: 0;
     font-family: "Unbounded", sans-serif;
-    font-size: clamp(3.8rem, 12vw, 9rem);
+    font-size: clamp(3.4rem, 11vw, 8.4rem);
     font-weight: 700;
     letter-spacing: -0.02em;
     text-shadow:
         0 0 18px rgba(160, 96, 255, 0.45),
         0 0 36px rgba(78, 255, 196, 0.35),
         0 18px 40px var(--shadow);
+}
+
+.ellipsis {
+    display: inline-flex;
+    gap: 0.12em;
+    margin-left: 0.08em;
+}
+
+.ellipsis span {
+    display: inline-block;
+    opacity: 0;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(1, end);
+}
+
+.ellipsis span:nth-child(1) {
+    animation-name: ellipsisDot1;
+}
+
+.ellipsis span:nth-child(2) {
+    animation-name: ellipsisDot2;
+}
+
+.ellipsis span:nth-child(3) {
+    animation-name: ellipsisDot3;
+}
+
+@keyframes ellipsisDot1 {
+    0%,
+    24% {
+        opacity: 0;
+    }
+    25%,
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes ellipsisDot2 {
+    0%,
+    49% {
+        opacity: 0;
+    }
+    50%,
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes ellipsisDot3 {
+    0%,
+    74% {
+        opacity: 0;
+    }
+    75%,
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 @keyframes liftIn {
