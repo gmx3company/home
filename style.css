@@ -17,8 +17,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
     color: var(--ink);
     font-family: "Fraunces", serif;
     text-rendering: optimizeLegibility;
@@ -29,51 +29,6 @@ body {
         linear-gradient(140deg, #06030f 0%, #0b0b1d 45%, #121b2a 100%);
 }
 
-header {
-    width: 100%;
-    padding: clamp(20px, 4vw, 48px) clamp(24px, 6vw, 72px) 0;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: clamp(16px, 4vw, 48px);
-}
-
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    gap: clamp(12px, 3vw, 32px);
-}
-
-nav a {
-    color: var(--ink-soft);
-    text-decoration: none;
-    font-family: "Unbounded", sans-serif;
-    font-size: clamp(0.9rem, 1.8vw, 1.05rem);
-    letter-spacing: 0.04em;
-}
-
-nav a:hover,
-nav a:focus-visible {
-    color: var(--ink);
-}
-
-.logo {
-    color: var(--ink);
-    font-weight: 600;
-}
-
-main {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
 
 .hero {
     width: 100%;
@@ -97,12 +52,6 @@ h1 {
         0 0 18px rgba(160, 96, 255, 0.45),
         0 0 36px rgba(78, 255, 196, 0.35),
         0 18px 40px var(--shadow);
-}
-
-.hero p {
-    margin: 0;
-    color: var(--ink-soft);
-    font-size: clamp(1.05rem, 2.4vw, 1.5rem);
 }
 
 .ellipsis {
